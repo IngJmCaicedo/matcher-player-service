@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: matcher-player-service
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: MATCHER-CONFIG-SERVER
+      fail-fast: true
+
+eureka:
+  instance:
+    nonSecurePort: ${server.port:8889}
+  client:
+    serviceUrl:
+      defaultZone: ${eureka.server.url:http://localhost:9090/eureka/}
+
+      

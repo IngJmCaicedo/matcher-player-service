@@ -1,0 +1,11 @@
+server:
+  port: ${service.port:8889}
+
+spring:
+  data:
+    mongodb:
+      host: ${mongodb.host:localhost}
+      port: ${mongodb.port:27017}
+      database: ${mongodb.database:matcher}
+      repositories:
+        enabled: true
